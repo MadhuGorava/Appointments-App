@@ -1,0 +1,45 @@
+/* Write your CSS here */
+.appointment-list-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: antiquewhite;
+  align-items: center;
+  box-shadow: 0px 4px 16px 0px #bfbfbf;
+  border-radius: 10px;
+}
+
+.appointment-details-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  color: black;
+  font-family: 'Roboto';
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.date {
+  color: black;
+  font-family: 'Roboto';
+  font-weight: lighter;
+  font-size: 15px;
+}
+
+.favorite-icon-container {
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.favorite-icon {
+  background: transparent;
+  margin-right: 24px;
+  align-self: center;
+  border: none;
+  outline: none;
+}
