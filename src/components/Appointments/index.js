@@ -55,6 +55,7 @@ class Appointments extends Component {
   }
 
   onChangeDate = event => {
+    this.setState({date: event.target.value})
     const date = event.target.value
     const formatDate = format(new Date(date), 'dd MMMM yyyy, EEEE')
     this.setState({date: formatDate})
@@ -64,7 +65,7 @@ class Appointments extends Component {
     const {appointmentsList, name, date} = this.state
     return (
       <div className="bg-container">
-        <h1 className="heading">Add Appointments</h1>
+        <h1 className="heading">Add Appointment</h1>
         <div className="container">
           <div className="form-container">
             <div className="image-card">
@@ -112,7 +113,6 @@ class Appointments extends Component {
               type="button"
               onClick={this.onDisplay}
               className="star-button"
-              testid="star"
             >
               Starred
             </button>

@@ -10,8 +10,8 @@ const AppointmentItem = props => {
   }
 
   const starImgUrl = isFavorite
-    ? 'https://assets.ccbp.in/frontend/react-js/appointments-app/star-img.png'
-    : 'https://assets.ccbp.in/frontend/react-js/appointments-app/filled-star-img.png'
+    ? 'https://assets.ccbp.in/frontend/react-js/appointments-app/filled-star-img.png'
+    : 'https://assets.ccbp.in/frontend/react-js/appointments-app/star-img.png'
 
   return (
     <li className="appointment-list-container">
