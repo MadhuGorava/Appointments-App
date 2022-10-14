@@ -1,4 +1,6 @@
 // Write your code here
+import {format} from 'date-fns'
+
 import './index.css'
 
 const AppointmentItem = props => {
@@ -8,6 +10,8 @@ const AppointmentItem = props => {
   const onClickFavoriteIcon = () => {
     toggleIsFavorite(id)
   }
+
+  const formedDate = format(new Date(date), 'dd MMMM yyyy, EEEE')
 
   const starImgUrl = isFavorite
     ? 'https://assets.ccbp.in/frontend/react-js/appointments-app/filled-star-img.png'
@@ -26,7 +30,7 @@ const AppointmentItem = props => {
           <img src={starImgUrl} className="favorite-icon" alt="star" />
         </button>
       </div>
-      <p className="date">{date}</p>
+      <p className="date">{formedDate}</p>
     </li>
   )
 }

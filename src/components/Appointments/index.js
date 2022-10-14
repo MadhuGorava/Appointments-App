@@ -1,8 +1,6 @@
 // Write your code here
 import {Component} from 'react'
 
-import {format} from 'date-fns'
-
 import {v4 as uuidv4} from 'uuid'
 
 import AppointmentItem from '../AppointmentItem'
@@ -26,12 +24,14 @@ class Appointments extends Component {
     }))
   }
 
-  onDisplay = () => {
+  onDisplay = isFavorite => {
     const {appointmentsList} = this.state
     const filteredCommentsList = appointmentsList.filter(
       eachComment => eachComment.isFavorite === true,
     )
-    this.setState({appointmentsList: filteredCommentsList})
+    this.setState({
+      appointmentsList: isFavorite ? filteredCommentsList : appointmentsList,
+    })
   }
 
   onAddAppointment = event => {
@@ -56,9 +56,6 @@ class Appointments extends Component {
 
   onChangeDate = event => {
     this.setState({date: event.target.value})
-    const date = event.target.value
-    const formatDate = format(new Date(date), 'dd MMMM yyyy, EEEE')
-    this.setState({date: formatDate})
   }
 
   render() {
