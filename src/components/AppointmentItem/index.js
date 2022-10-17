@@ -20,7 +20,7 @@ const AppointmentItem = props => {
   return (
     <li className="appointment-list-container">
       <div className="appointment-details-card">
-        <h1 className="title">{name}</h1>
+        <p className="title">{name}</p>
         <button
           type="button"
           className="favorite-icon-container"
